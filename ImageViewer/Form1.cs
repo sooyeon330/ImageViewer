@@ -46,7 +46,10 @@ namespace ImageViewer
             this.imgCount++;
             if (imgCount > this.imgList.Images.Count-1)
             {
-                this.imgCount = 0;
+                //  this.imgCount = 0;
+                this.imgCount = this.imgList.Images.Count - 1;
+                MessageBox.Show("사진의 끝 입니다!", "알림", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             Show();
         }
